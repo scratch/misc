@@ -1,0 +1,38 @@
+#header-block  {
+    background-color: #0E6385;
+    height:  153px;  /* REVISIT: How to make this % of full page? */;
+		width: 100%;
+		top:    0;
+}
+
+#header-menu  {
+	  position: relative;
+    background-color: #F9F035;
+		top:      55px;
+    left:     200px;
+    height:   60px;
+    width:    500px;
+}
+
+#header-menu a  {
+		display: inline-block;
+		height: inherit;
+		width:  32%;
+		background-color: gray;
+		margin:  2px;
+		text-align: center;
+}
+
+#top-menu  {
+    background-color: #F9F035;
+    height: 75px;
+    background-color:  #D8D7D7;
+}
+#body-block  {
+    background-color: white;
+    height:  400px;
+}
+#footer-block  {
+    background-color: #0E6385;
+    height:  30%;
+}

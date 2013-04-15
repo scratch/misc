@@ -1,55 +1,58 @@
 /* page.css --  used with page.html for template.
 
-   Impt: Use with normalise.css
+   Impt: Use with reset.css OR  normailise.css
  */
-body  {
-    margin    : 0;
-    border    : 0;
-    padding   : 0;
-    font-size : 100%;
-}
 
+body  {
+    margin:    0;
+    border:    0;
+    padding:   0;
+    font-size: 100%;
+}
 
 #page  {
     position: absolute;
-    top: 0;
+    top:    0;
     bottom: 0;
-    width: 100%;
+    width:  100%;
 }
 
 
 #header-block  {
     background-color: #0E6385;
-    height:  20%;
-    width: 100%;
+    height:           20%;
+    width:            100%;
 }
 
 
 #header-menu  {
     background-color: #F9F035;
-    height:   35%;
-    width:    50%; 
-    /* REVISIT: below is to move the menu down and to the right; 
-       any better way?  */
+    height:   36px;
+    width:    51%; 
     position: relative;
     left:     25%;
-    top:      65%;
+    top:      125px;
 }
 
 
-#header-menu a  {
-    display: inline-block;
-    height:  100%;
-    width:  31%;
-    background-color: gray;
-    margin:  2px;
-    text-align: center;
+#header-menu li  { 
+   float:           left;
+   list-style-type: none;
+   width:           33.33%;
+   background:      #666;
+   text-align:      center;
+}
+
+/* Not used */
+.mid-border  {
+  border-left: 1px solid #ccc;
+  border-right:1px solid #ccc;
 }
 
 
 #top-menu  {
-    background-color: grey;
-    height: 5%;
+    background-color:  grey;
+    height:            5%;
     background-color:  #D8D7D7;
 }
 
@@ -57,23 +60,45 @@ body  {
 /* REVISIT: How to make all menus have some common property? */
 #top-menu a  {
     display: inline-block;
-    height: 100%;
-    width: auto;
+    height:           100%;
+    width:            auto;
     background-color: #F0D301;
-    font-color: #87A937;
-    padding-right:  5px;
-    padding-left:    2px;
-    margin:         0;
+    font-color:       #87A937;
+    padding-right:    5px;
+    padding-left:     2px;
+    margin:           0;
 }
 
 
 #body-block  {
-    height:  65%;
+    height:           65%;
     background-color: darkgrey;
 }
 
 
 #footer-block  {
     background-color: #0E6385;
-    height:  8%;
+    height:           8%;
 }
+
+
+.radio  {
+    display:  list-item;
+    background-color: #FFDF00;
+    padding:         10px 0;
+}
+
+
+.community  {
+    background-color: #FE8000;
+    display:  list-item;
+    padding:         10px 0;
+}
+
+
+.events  {
+    background-color: #064360;
+    display:  list-item;
+    padding:         10px 0;
+}
+

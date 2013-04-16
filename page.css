@@ -2,6 +2,22 @@
 
    Impt: Use with reset.css OR  normailise.css
  */
+
+@font-face {
+  font-family: DIN;
+  src: url(font/DIN/din1451engschrift.ttf);
+}
+
+@font-face {
+  font-family: GOTHAMbold;
+  src: url(font/Gotham/Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: GOTHMbook;
+  src: url(font/DIN/Gotham-Book.otf);
+}
+
 body  {
     margin:    0;
     border:    0;
@@ -11,31 +27,84 @@ body  {
 
 
 #page  {
-    position: absolute;
-    top:    0;
-    bottom: 0;
+    max-width: 1024px;
+    margin: 0 auto;
     width:  100%;
+}
+
+.header-top {
+  overflow: hidden;
+}
+.logo {
+float: left;
+margin-left: 0.6%;
+}
+
+.top-menu {
+    float: left;
+    width: 50%;
+}
+
+.top-nav-menu {
+    margin-top: 15px;
+    margin-left: 7.2%;
+}
+
+.top-menu li {
+  display: inline-block;
+  padding-right: 2.5%;
+}
+
+.sign {
+  float: right;
+  width: 12.7%;
+}
+
+.sign-in {
+  margin-top: 15px;
+}
+.sign li {
+  display: inline-block;
+}
+.sign li.first {
+  border-right: 1px solid;
+  padding-right: 7px;
+ line-height: 11px;
+}
+.sign li a {
+    text-decoration: none;
+    color: #075a78;
+    font-family: GOTHAMbold;
+    font-size: 13px;
+}
+.top-menu .top-nav-menu li a{
+    text-decoration: none;
+    color: #075a78;
+    font-family: GOTHAMbold;
+    font-size: 11px;
+    background: url(images/down-arrow.jpg) no-repeat center right;
+    padding-right: 14px;
 }
 
 
 #header-block  {
-    background-color: #0E6385;
-    height:           156px;
-    width:            100%;
+    background-color: #f8f8f8;
+    min-height: 156px;
+    width:100%;
 }
 
 
 #header-menu  {
     background-color: #F9F035;
     height:   63px;
-    width:    30%; 
+    width:    30%;
     position: relative;
     left:     23.5%;
     top:      90px;
 }
 
 
-#header-menu li  { 
+#header-menu li  {
    float:           left;
    list-style-type: none;
    width:           32%;
@@ -105,6 +174,6 @@ body  {
     display:  list-item;
     padding:         23px 0;
 		font-size:       20px;
-		
+
 }
 

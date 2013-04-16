@@ -77,11 +77,9 @@ body  {
   margin-top: 15px;
 }
 
-
 .sign li {
   display: inline-block;
 }
-
 
 .sign li.first {
   border-right: 1px solid;
@@ -89,14 +87,12 @@ body  {
  line-height: 11px;
 }
 
-
 .sign li a {
     text-decoration: none;
     color: #075a78;
     font-family: GOTHAMbold;
     font-size: 13px;
 }
-
 
 .top-menu .top-nav-menu li a{
     text-decoration: none;
@@ -137,6 +133,22 @@ body  {
     font-size:   22px;
 }
 
+#header-block  {
+    background-color: #f8f8f8;
+    min-height: 156px;
+    width:100%;
+}
+
+
+#header-menu  {
+    background-color: #F9F035;
+    height:   63px;
+    width:    30%;
+    position: relative;
+    left:     23.5%;
+    top:      90px;
+}
+
 
 #header-menu li  {
    float:           left;
@@ -167,8 +179,12 @@ body  {
     background-color: #064360;
     display:  list-item;
     padding:         23px 0;
-		font-size:       20px;
+    font-size:       20px;
 
+    width:           32%;
+    background:      #666;
+    text-align:      center;
+    border-right:    3px solid #ccc; /* TODO:last menu shouldn't have a border */
 }
 
 
@@ -177,7 +193,6 @@ body  {
   border-left: 1px solid #ccc;
   border-right:1px solid #ccc; /* TODO:last menu shouldn't have a border */
 }
-
 
 
 #top-menu  {
@@ -212,4 +227,27 @@ body  {
 }
 
 
+.radio  {
+    display:  list-item;
+    background-color: #FFDF00;
+    padding:         23px 0;
+		font-size:       20px;
+}
+
+
+.community  {
+    background-color: #FE8000;
+    display:  list-item;
+    padding:         23px 0;
+		font-size:       20px;
+}
+
+
+.events  {
+    background-color: #064360;
+    display:  list-item;
+    padding:         23px 0;
+		font-size:       20px;
+
+}
 

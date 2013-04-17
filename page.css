@@ -27,11 +27,10 @@ body  {
 
 
 #page  {
-    max-width: 1024px;
-    *margin: 0 auto;
+    max-width: 1124px;
+    margin: 0 auto;
     width:  100%;
 }
-
 
 
 #header-block  {
@@ -40,13 +39,10 @@ body  {
     width:100%;
 }
 
-
-
 #header-top {
     width: 100%;
     height: 93px;
 }
-
 
 .logo {
     float: left;
@@ -108,6 +104,7 @@ body  {
   width: 100%;
   height: 63px;
   float: left;
+  margin-top: 7px;
 }
 
 /*
@@ -135,11 +132,12 @@ body  {
 }
 
 .header-menu  {
-		float: left;
-		width: 50%;
-    left:     23.5%;
+    float: left;
+    width: 50%;
     font-family: GOTHAMbold;
     font-size:   22px;
+    margin-left: 8%;
+    margin-top:  15px;
 }
 
 .header-menu li  {
@@ -149,25 +147,37 @@ body  {
    text-align:      center;
 }
 
+
 .radio-menu  {
     background-color: #FFDF00;
-    padding:         23px 0;
-		font-size:       20px;
+    padding:          18px 32px;
+    font-size:        20px;
 }
 
 
 .community  {
     background-color: #FE8000;
-    padding:         23px 0;
-		font-size:       20px;
+    color:            #F8F8F8;
+    padding:          18px 29px;
+    font-size:        20px;
+    border-left:      2px  solid #F7F7F7;
+    border-right:     2px  solid #F7F7F7;
 }
 
 
+
 .events  {
-    padding:         23px 0;
-    font-size:       20px;
-    text-align:      center;
+    padding:    18px 29px;
+    font-size:  20px;
+    text-align: center;
     background: #064360;
+    color:      #F8F8F8;
+}
+
+
+
+.floatleft  {
+    float: left;
 }
 
 
@@ -178,22 +188,35 @@ body  {
 }
 
 
-#top-menu  {
-    background-color:  grey;
-    height:            45px;
-    background-color:  #D8D7D7;
+
+#main-menu  {
+    width: 70%;
+    height: 30px;
+    background-color: #FFDF00;
+    padding-right:   10px;
+    color: #075a78;
 }
 
 
-#top-menu a  {
-    display: inline-block;
-    height:           100%;
-    width:            auto;
-    background-color: #F0D301;
+#main-menu li:first-child  {
+    padding-left: 10px;
+}
+
+
+#main-menu  li {
+    float: left;
+    margin-left:  10px;
+    margin-top: 7px;
+    font-family: GOTHAMbold;
+    font-size:   13px;
     font-color:       #87A937;
-    padding-right:    5px;
-    padding-left:     2px;
-    margin:           0;
+}
+
+.search-block  {
+    width: 40%;
+    height: 20px;
+    color: #FFDF00;
+    float: right;
 }
 
 

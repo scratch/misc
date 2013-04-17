@@ -195,11 +195,13 @@ body  {
     background-color: #FFDF00;
     padding-right:   10px;
     color: #075a78;
+    float: left;
 }
 
 
 #main-menu li:first-child  {
     padding-left: 10px;
+    float: left;
 }
 
 
@@ -213,10 +215,9 @@ body  {
 }
 
 .search-block  {
-    width: 40%;
-    height: 20px;
+    width: 10px;
     color: #FFDF00;
-    float: right;
+    float: left;
 }
 
 

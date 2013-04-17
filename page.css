@@ -28,7 +28,7 @@ body  {
 
 #page  {
     max-width: 1024px;
-    margin: 0 auto;
+    *margin: 0 auto;
     width:  100%;
 }
 
@@ -110,7 +110,15 @@ body  {
   float: left;
 }
 
+/*
 #header-bottom  li:first-child  {
+    padding-left: 60px;
+    padding-top: 10px;
+    float: left;
+}
+*/
+
+.radio-img {
     padding-left: 60px;
     padding-top: 10px;
     float: left;
@@ -123,44 +131,25 @@ body  {
     font-family: GOTHAMbold;
     font-size:   14px;
     color:       #075a78;
+		float:       left;
 }
 
-#header-menu  {
-    width:    90%;
-    position: relative;
+.header-menu  {
+		float: left;
+		width: 50%;
     left:     23.5%;
     font-family: GOTHAMbold;
     font-size:   22px;
 }
 
-#header-block  {
-    background-color: #f8f8f8;
-    min-height: 156px;
-    width:100%;
-}
-
-
-#header-menu  {
-    background-color: #F9F035;
-    height:   63px;
-    width:    30%;
-    position: relative;
-    left:     23.5%;
-    top:      90px;
-}
-
-
-#header-menu li  {
+.header-menu li  {
    float:           left;
    list-style-type: none;
-   width:           27%;
    background:      #666;
    text-align:      center;
-   /*border-right:    3px solid #ccc; TODO:last menu shouldn't have a border */
 }
 
-.radio  {
-    display:  list-item;
+.radio-menu  {
     background-color: #FFDF00;
     padding:         23px 0;
 		font-size:       20px;
@@ -169,22 +158,16 @@ body  {
 
 .community  {
     background-color: #FE8000;
-    display:  list-item;
     padding:         23px 0;
 		font-size:       20px;
 }
 
 
 .events  {
-    background-color: #064360;
-    display:  list-item;
     padding:         23px 0;
     font-size:       20px;
-
-    width:           32%;
-    background:      #666;
     text-align:      center;
-    border-right:    3px solid #ccc; /* TODO:last menu shouldn't have a border */
+    background: #064360;
 }
 
 
@@ -202,7 +185,6 @@ body  {
 }
 
 
-/* REVISIT: How to make all menus have some common property? */
 #top-menu a  {
     display: inline-block;
     height:           100%;
@@ -224,30 +206,5 @@ body  {
 #footer-block  {
     background-color: #0E6385;
     height:           8%;
-}
-
-
-.radio  {
-    display:  list-item;
-    background-color: #FFDF00;
-    padding:         23px 0;
-		font-size:       20px;
-}
-
-
-.community  {
-    background-color: #FE8000;
-    display:  list-item;
-    padding:         23px 0;
-		font-size:       20px;
-}
-
-
-.events  {
-    background-color: #064360;
-    display:  list-item;
-    padding:         23px 0;
-		font-size:       20px;
-
 }
 

@@ -1035,16 +1035,26 @@ color: #1f1f1f;
   color: #1f1f1f;
 }
 
+.content-middle-banner,
+.wrs-selection-img {
+  position: relative;
+}
+
+.content-middle-banner:hover:before {
+  background: url(images/Banner_02Y.jpg);
+}
+
 .slider:hover:before,
 .foriegn-affair:hover:before,
-.wrs-selection-rows:hover:before {
+.wrs-selection-img:hover:before {
   background: #faf037;
   opacity: .8;
   }
 
 .slider:before,
 .foriegn-affair:before,
-.wrs-selection-rows :hover:before {
+.content-middle-banner:before,
+.wrs-selection-img:before {
     content: "";
     display: block;
     position: absolute;

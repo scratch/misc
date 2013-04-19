@@ -225,8 +225,19 @@ body  {
 		text-indent: -9999em;
 		width: 28px;
 }
-
 */
+
+
+#main-menu .submit  {
+    /* background: url("images/search.jpg") repeat scroll 0 0 transparent;
+		 */
+    background: url("images/search.jpg");
+		margin-top: -4px;
+		width: 28px;
+		text-indent: -9999em;
+}
+
+
 .search-block  {
     width: 233px;
 		margin-left: 70px;

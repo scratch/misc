@@ -16,10 +16,20 @@ function tt_print_fields($table_name) {
 
 /* Return array with the field entries
  *
+ * $table: The table to use.
+ * $fields_arr:  array consisting of all the fields to be accessed in the table.
+ * 
+ * Return: query result object.
  */
- 
-function tt_select_fields ($table, $fields_arr)  {
+function tt_select_fields ($db_fd, $table, $fields_arr)  {
+	$fields = implode(",", $fields_arr);
+	$qry = sprintf ("SELECT  %s FROM %s", $fields , $table);
+	$qry_result = mysql_query($qry, $db_fd);
+	if (!$qry_result) {
+		printf("QUERY FAILED: %s", mysql_error());
+	}
 	
+	return $qry_result;
 }
 
 

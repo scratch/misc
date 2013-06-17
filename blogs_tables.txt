@@ -1,0 +1,68 @@
+Blogs Table
+Field	                Type	                Null	Key	Default	Extra
+-----------------------------------------------------------------------------
+blogs_id	        int(10) unsigned	NO	PRI	NULL	auto_increment
+blogs_author_id	        int(10) unsigned	NO	MUL	0	
+blogs_title	        varchar(255)	        NO			
+blogs_subtitle	        text	                NO	MUL	NULL	
+blogs_description	mediumtext	        NO	MUL	NULL	
+blogs_authorised	tinyint(1)	        NO	MUL	0	
+blogs_read_ctr	        int(10) unsigned	NO		0	
+blogs_entries_ctr	int(10) unsigned	NO		0	
+blogs_comments_ctr	int(10) unsigned	NO		0	
+blogs_author_photo	varchar(30)	        NO		NULL	
+
+
+blog_entries Table
+Field	                        Type	Null	Key	Default	Extra
+--------------------------------------------------------------------------------
+blog_entries_id	                int(10) unsigned	NO	PRI	NULL	auto_increment
+blog_entries_blogs_id	        int(10) unsigned	NO		0	
+blog_entries_title	        varchar(255)	NO			
+blog_entries_summary	        text	NO	MUL	NULL	
+blog_entries_content	        text	NO	MUL	NULL	
+blog_entries_authorised	        tinyint(1)	NO	MUL	0	
+blog_entries_members_only	tinyint(1)	NO		0	
+blog_entries_added_on	        datetime	NO	MUL	0000-00-00 00:00:00	
+blog_entries_last_updated_on	datetime	NO		0000-00-00 00:00:00	
+blog_entries_sort_id	        tinyint(4)	YES		0	
+blog_entries_read_ctr	        int(6) unsigned	YES		0	
+blog_entries_allow_comments	tinyint(4)	NO		0	
+blog_entries_comments_ctr	int(10) unsigned	NO		0	
+
+
+Table: blog_entries_comments
+Field	                                Type	Null	Key	Default	Extra
+--------------------------------------------------------------------------------
+blog_entries_comments_id	        int(10) unsigned	NO	PRI	NULL	auto_increment
+blog_entries_comments_blog_entries_id	int(10) unsigned	NO	MUL	0	
+blog_entries_comments_date	        datetime	NO		0000-00-00 00:00:00	
+blog_entries_comments_author_id	        int(10) unsigned	NO	MUL	0	
+blog_entries_comments_comment	        text	NO		NULL	
+blog_entries_comments_authorized	tinyint(1)	NO		0	
+blog_entries_comments_ip	        int(10) unsigned	NO		0	
+
+
+Table: blog_entries_uploaded_files
+Field	                                Type	Null	Key	Default	Extra
+--------------------------------------------------------------------------------
+blog_entries_uploaded_files_id	        int(10) unsigned	NO	PRI	NULL	auto_increment
+blog_entries_id	int(10)                 unsigned	NO	MUL	0	
+blog_entries_blogs_id	                int(10) unsigned	NO		NULL	
+blog_entries_uploaded_files_name	varchar(40)	NO			
+
+
+members Table
+-------------
+members_id
+members_username
+members_password
+members_name
+members_email
+members_dob
+members_profession
+members_gender
+members_registration_date
+members_last_login_date
+members_last_activity_date
+members_status

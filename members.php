@@ -5,38 +5,18 @@ include_once("tt_lib.php");
 
 $fd = tt_connect();
 
-printf ("Print out all the fields of members array:  \n"); 
+/*printf ("Print out all the fields of members array:  \n"); 
 tt_print_fields("members");
+*/
 
+$qry_result = tt_select_fields($fd, "members", array("members_name", "members_email", "members_username", "members_status","members_last_activity_date", "members_registration_date"));
 
-$qry_result = mysql_query("SELECT members_name,members_email,members_username FROM members", $fd);
-if (!$qry_result) {
-	die("QUERY FAILED: " . mysql_error());
+printf ("Member name, email, registration date, last activity date, status\n");
+while (($members = mysql_fetch_array($qry_result, MYSQL_ASSOC))) {
+   printf ("%s, %s, %s, %s, %s\n", $members['members_name'], $members['members_email'], $members['members_registration_date'], 
+           $members['members_last_activity_date'], $members['members_status']);
 }
-
-
-
-$file_fd = fopen("/tmp/mem.csv", "w");
-if (!$file_fd) {
-	die("Error Opening file\n");
-}
-
-
-
-$members = array();
-while (($members = mysql_fetch_array($qry_result))) {
-	if (!$members) {
-		die("Error fetching array from mysql object");
-	}
-
-	fputcsv($file_fd, $members);
-}
-print("Member CSV written\n");
-
-$retVal = fclose($file_fd);
-if (!$retVal) {
-	die("Error closing CSV file.");
-}
+print("Done\n");
 
 $retVal = mysql_close($fd);
 if (!$retVal) {

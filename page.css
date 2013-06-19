@@ -1,0 +1,1081 @@
+/* page.css --  used with page.html for template.
+
+   Impt: Use with reset.css OR  normailise.css
+ */
+
+@font-face {
+  font-family: DIN;
+  src: url(font/DIN/din1451engschrift.ttf);
+}
+
+@font-face {
+  font-family: GOTHAMbold;
+  src: url(font/Gotham/Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: GOTHAMbook;
+  src: url(font/Gotham/Gotham-Book.otf);
+}
+
+body  {
+    margin:    0;
+    border:    0;
+    padding:   0;
+    font-size: 100%;
+}
+
+
+#page  {
+    width:  100%;
+    background: #fef773;
+}
+
+.header-top {
+  overflow: hidden;
+}
+
+.logo {
+  float: left;
+  margin-left: 0.6%;
+}
+
+.top-menu {
+  float: left;
+  width: 50%;
+}
+
+.top-nav-menu {
+  margin-top: 15px;
+  margin-left: 7.2%;
+}
+
+.top-menu li {
+  display: inline-block;
+  padding-right: 2.5%;
+}
+
+.sign {
+  float: right;
+  width: 12.7%;
+}
+
+.sign-in {
+  margin-top: 15px;
+}
+.sign li {
+  display: inline-block;
+}
+.sign li.first {
+  border-right: 1px solid;
+  padding-right: 7px;
+ line-height: 11px;
+}
+.sign li a {
+    text-decoration: none;
+    color: #075a78;
+    font-family: GOTHAMbold;
+    font-size: 13px;
+}
+.top-menu .top-nav-menu li a{
+    text-decoration: none;
+    color: #075a78;
+    font-family: GOTHAMbold;
+    font-size: 11px;
+    background: url(images/down-arrow.jpg) no-repeat center right;
+    padding-right: 14px;
+}
+
+.header {
+  background: #f8f8f8;
+}
+
+#header-block {
+  min-height: 144px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+
+#header-menu  {
+    background-color: #F9F035;
+    height:   63px;
+    width:    30%;
+    position: relative;
+    left:     23.5%;
+    top:      90px;
+}
+
+
+#header-menu li  {
+   float:           left;
+   list-style-type: none;
+   width:           32%;
+   background:      #666;
+   text-align:      center;
+   border-right:    3px solid #ccc; /* TODO:last menu shouldn't have a border */
+}
+
+.radios {
+  margin-left: 5.8%;
+  margin-top: 9px;
+  float: left;
+  width: 7.8%;
+}
+
+.listen {
+  float: left;
+  margin-top: 21px;
+}
+
+.listen a {
+  text-decoration: none;
+  color: #015b7e;
+  font-family: GOTHAMbold;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+/* Not used */
+.mid-border  {
+  border-left: 1px solid #ccc;
+  border-right:1px solid #ccc; /* TODO:last menu shouldn't have a border */
+}
+
+/**css for header tabs **/
+.header-tabs ul li {
+  display: inline-block;
+}
+
+.header-tabs {
+  float: left;
+  margin-left: 4.7%;
+}
+
+.header-tabs li a.radio {
+  color: #0054a5;
+  background: #ffe102;
+  padding: 15px 30px;
+  line-height: 46px;
+}
+
+.header-tabs li a {
+  text-decoration: none;
+  font-family: GOTHAMbold;
+  font-size: 22px;
+}
+
+.header-tabs li.community {
+  margin-left: -2px;
+}
+
+.header-tabs li.events {
+  margin-left: -2px;
+}
+
+.header-bottom-media {
+  float: right;
+  margin-top: -32px;
+  margin-right: 3.2%;
+}
+
+.header-tabs li a.community {
+  background: #ff8201;
+  padding: 15px 26px;
+  color: #fff;
+}
+
+.header-tabs li a.events {
+  background: #015b7e;
+  padding: 15px 23px;
+  color: #fff;
+}
+
+#main-menu {
+  background: #ffe100;
+  line-height: 38px;
+}
+
+#main-menu li {
+  display: inline-block;
+  padding-right: 1.5%;
+}
+
+#main-menu li a {
+  color: #0054a5;
+  font-family: GOTHAMbold;
+  font-size: 13px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#main-menu li.first {
+  padding-left: 3.3%;
+}
+#main-menu input.search {
+  margin-left: 16.5%;
+  border: 0px;
+  padding: 4px;
+  width: 150px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.main-region {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+#main-content{
+  overflow: hidden;
+  padding: 0 3.5%;
+  background: #fff;
+  padding-bottom: 52px;
+}
+
+#main-menu form {
+  float: left;
+  width: 235px;
+  height: 24px;
+}
+
+#main-menu .submit {
+  display: inline-block;
+  border: none;
+  width: 28px;
+  background: url(images/search.jpg);
+  height: 23px;
+  text-indent: -9999em;
+  margin-left: -4px;
+}
+
+#main-menu ul {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+}
+.primary-content {
+  float: left;
+  width: 72.5%;
+}
+
+.news-today {
+  margin-top: 34px;
+}
+
+.news-today h1 {
+  color: #1f1f1f;
+  font-size: 20px;
+  font-family: GOTHAMbold;
+  display: inline-block;
+}
+
+.news-date {
+  color: #bababa;
+  font-family: GOTHAMbook;
+  font-size: 20px;
+  margin-left: 0.6%;
+}
+
+.slider {
+  float: left;
+  margin-top: 15px;
+  width: 444px;
+  height: 400px;
+  position: relative;
+}
+
+.slider-text-country {
+  background: #e30d29;
+  position: absolute;
+  top: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-family: GOTHAMbold;
+  left: 8px;
+  padding: 4px 7px 4px 5px;
+}
+
+.slider-date {
+  position: absolute;
+  top: 8px;
+  background: #f1f1f1;
+  color: #3c3c3c;
+  left: 121px;
+  font-size: 12px;
+  font-family: GOTHAMbold;
+  padding: 4px 11px;
+  width: 65%;
+}
+
+.slider-content {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  background: #414143;
+  width: 100%;
+  background: url(images/slider-text-back.png);
+}
+
+.slider-content h1 {
+  color: #fdf528;
+  font-size: 22px;
+  font-family: GOTHAMbold;
+  margin-top: 15px;
+  margin-left: 16px;
+}
+
+.slider-bottom {
+  background: #414143;
+  bottom: -1px;
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+}
+
+.slider-bottom .slider1 a,
+.slider-bottom .slider2 a,
+.slider-bottom .slider3 a{
+  text-indent: -9999em;
+  background: url(images/pager-slider.jpg) no-repeat;
+  display: inline-block;
+  width: 6px;
+  height: 7px;
+}
+
+.latest-news-bulletion {
+  float: left;
+  margin-top: 15px;
+  margin-left: 0.3%;
+  background: #f1f1f1;
+  width: 34.6%;
+  padding-bottom: 7px;
+}
+
+.latest-news-bulletion li {
+  display: inline-block;
+  border-bottom: 1px solid #9c9c9c;
+  padding-bottom: 8px;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.latest-news {
+  padding: 0px 3.6%;
+  he
+}
+
+.latest-news-bulletion .news-label {
+  font-family: GOTHAMbold;
+  font-size: 12px;
+  color: #0054a5;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.latest-news-bulletion .news-bulletion-label {
+  display: block;
+  background: #242021;
+  line-height: 29px;
+  margin-left: 2px;
+  margin-right: 1px;
+  text-align: center;
+  color: #f2f33d;
+  font-size: 13px;
+  font-family: GOTHAMbold;
+  padding-left: 3.8%;
+}
+
+.latest-news-bulletion li a {
+  font-family: GOTHAMbook;
+  font-size: 13px;
+  color: #242223;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 16px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.latest-news-bulletion li:last-child {
+  border: none;
+}
+
+.latest-news {
+  height: 384px;
+}
+
+.on-air {
+  margin-top: 34px;
+  margin-bottom: 14px;
+}
+
+.on-air h1 {
+  color: #1f1f1f;
+  font-size: 20px;
+  font-family: GOTHAMbold;
+}
+
+.sidebar-second {
+  float: left;
+  margin-left: 2.1%;
+  width: 240px;
+}
+
+.foriegn-affair {
+  position: relative;
+}
+
+.affair-content{
+  position: absolute;
+  top: 0;
+  min-width: 200px;
+}
+
+.affair-text1 {
+  color: #fff;
+  margin-top: 17px;
+  display: inline-block;
+  margin-left: 8.2%;
+  font-size: 20px;
+  font-family: DIN;
+}
+
+.foriegn-affair .affair-text {
+  display: block;
+  width: 100px;
+  color: #fff;
+  font-family: DIN;
+  font-size: 30px;
+  margin-left: 10%;
+  line-height: 26px;
+}
+
+.foriegn-affair .philip-mottaz {
+  display: inline-block;
+  font-size: 11px;
+  font-family: GOTHAMbold;
+  color: #f8f943;
+  margin-top: 41px;
+  margin-left: 9.6%;
+  width: 105px;
+}
+
+.foriegn-affair .listen-live {
+  background: #fcee36;
+  margin-top: 30px;
+  display: block;
+  margin-left: 4%;
+  line-height: 18px;
+  width: 105px;
+}
+
+.foriegn-affair .listen-live img {
+  margin-left: 5%;
+  margin-top: 3px;
+}
+
+.foriegn-affair .listen-live a {
+  text-decoration: none;
+  font-size: 12px;
+  font-family: GOTHAMbold;
+  color: #28181b;
+  padding-left: 4px;
+}
+
+.sidebar-second .next-content {
+  background: #e40c23;
+  padding: 12px 5.5% 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.sidebar-second .next-label, .next-description {
+  font-family: GOTHAMbold;
+  font-size: 14px;
+  color: #f9e838;
+  margin-bottom: 4px;
+}
+
+.sidebar-second .next-name {
+  font-size: 18px;
+  font-family: GOTHAMbold;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.sidebar-second .later-content {
+  background: #015b7e;
+  margin-top: 3px;
+  padding: 14px 5% 8px;
+}
+
+.later-bbc img {
+  float: right;
+  margin-top: 4px;
+}
+.later-content .later-label {
+  color: #FFF;
+  font-size: 14px;
+  font-family: GOTHAMbold;
+  line-height: 9px;
+}
+
+.later-content .later-description {
+  line-height: 22px;
+}
+
+.later-content .later-time {
+  font-size: 14px;
+  font-family: GOTHAMbook;
+  color: #fff;
+  padding-right: 12px;
+}
+
+.later-content .later-text {
+  color: #fff63d;
+  font-size: 14px;
+  font-family: GOTHAMbold;
+}
+
+.content-middle-banner {
+  margin-top: 35px;
+  float: left;
+}
+
+/** css for footer **/
+#footer .footer-menu li {
+  display: inline-block;
+  padding: 9px 2.2%;
+  float: left;
+}
+
+#footer .footer-menu li a {
+  text-decoration: none;
+  font-family: GOTHAMbold;
+  font-size: 12px;
+  color: #fff227;
+}
+
+#footer .footer-menu li.news {
+  background: #e40c23;
+}
+
+#footer .footer-menu li.arts {
+  background: #6a37d4;
+}
+
+#footer .footer-menu li.business {
+  background: #0153a5;
+}
+
+#footer .footer-menu li.home-family {
+  background: #ef4f1d;
+}
+
+#footer .footer-menu li.life {
+  background: #646464;
+}
+
+#footer .footer-menu li.science-tech {
+  background: #34b751;
+}
+
+#footer .footer-menu li.sports {
+  background: #1d58f0;
+}
+
+.footer-bottom {
+  background: #f8f8f8;
+  float: left;
+  width: 100%;
+}
+
+.footer-bottom-menu ul {
+  color: #1b1b1b;
+  font-size: 12px;
+  font-family: GOTHAMbold;
+}
+
+.footer-bottom-menu ul h1 {
+  margin-bottom: 4px;
+}
+
+.footer-content-partners ul h1{
+  margin-bottom: 20px;
+}
+
+.footer-bottom-menu li {
+  line-height: 17px;
+}
+
+.footer-bottom-menu li a{
+  text-decoration: none;
+  font-size: 12px;
+  font-family: GOTHAMbook;
+  color: #065983;
+}
+
+.footer-bottom-menu {
+  float: left;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.footer-wrs {
+  float: left;
+  width: 26.1%;
+}
+
+.footer-wrs li {
+  padding-left: 8.2%;
+}
+.footer-radio {
+  float: left;
+  width: 14.1%;
+}
+
+.footer-community {
+  float: left;
+  width: 14.1%;
+}
+
+.footer-events {
+  float: left;
+  width: 14%;
+}
+
+.footer-about {
+  float: left;
+  width: 12%;
+}
+
+.footer-content-partners {
+  float: left;
+}
+
+/** css for content bottom */
+.content-bottom-first,
+.content-bottom-middle,
+.content-bottom-last{
+  width: 300px;
+  float: left;
+}
+
+.content-bottom-first,
+.content-bottom-middle {
+  padding-right: 26px;
+}
+
+.content-bottom {
+  float: left;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.content-bottom h1.title {
+  color: #222021;
+  font-size: 14px;
+  font-family: GOTHAMbold;
+  margin-bottom: 10px;
+}
+
+.wrs-platlist-img {
+  height: 97px;
+}
+
+.wrs-playlist-content {
+  background: #6a37d4;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+.wrs-playlist-main {
+  padding-top: 9px;
+  padding-bottom: 3px;
+}
+
+.wrs-playlist {
+  margin-bottom: 7px;
+}
+.wrs-playlist-name {
+  font-size: 12px;
+  font-family: GOTHAMbook;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.wrs-playlist-user {
+  font-size: 12px;
+  font-family: GOTHAMbold;
+  color: #fff;
+  padding-bottom: 2px;
+}
+
+.wrs-selection-img {
+  float: left;
+  width: 150px;
+  height: 98px;
+}
+
+.wrs-selection-content {
+  float: left;
+  width: 140px;
+  padding-left: 10px;
+  height: 98px;
+}
+
+.wrs-selection-rows {
+float: left;
+width: 100%;
+margin-bottom: 6px;
+}
+
+.wrs-selection-rows.rows1 .wrs-selection-content {
+  background: #0153a5;
+}
+
+.wrs-selection-rows.rows2 .wrs-selection-content {
+  background: #3ab54b;
+}
+
+.wrs-selection-rows.rows3 .wrs-selection-content {
+  background: #6a33d7;
+}
+
+.wrs-selection-rows.rows4 .wrs-selection-content {
+  background: #faf037;
+}
+
+.wrs-selection-rows.rows5 .wrs-selection-content {
+  background: #646464;
+}
+
+.wrs-selection-rows.rows6 .wrs-selection-content {
+  background: #1d58f0;
+}
+
+.wrs-selection-main-title {
+  font-size: 10px;
+  font-family: GOTHAMbold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.wrs-selection-main-time {
+  font-size: 10px;
+  color: #fff;
+  font-family: GOTHAMbook;
+}
+
+.wrs-selection-main-desc {
+  font-size: 14px;
+  font-family: GOTHAMbold;
+  color: #fff;
+}
+
+.wrs-selction-main {
+  padding-top: 9px;
+}
+
+.wrs-selection-main-title {
+  font-size: 10px;
+  font-family: GOTHAMbold;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 12px;
+  width: 98px;
+  float: left;
+}
+
+.wrs-channel-img {
+  margin-top: -5px;
+}
+
+.wrs-selection-main-time {
+  font-size: 10px;
+  color: #fff;
+  font-family: GOTHAMbook;
+  padding-bottom: 4px;
+  width: 105px;
+}
+
+.wrs-selection-main-desc {
+  font-size: 14px;
+  font-family: GOTHAMbold;
+  color: #fff;
+  width: 120px;
+  line-height: 16px;
+}
+
+.classifieds-recent-posts {
+  background: #f1f1f1;
+  padding: 16px;
+  padding-bottom: 12px;
+}
+
+.recent-post-title {
+  font-size: 12px;
+  font-family: GOTHAMbold;
+  color: #065775;
+}
+
+.recent-post-img {
+width: 41px;
+float: left;
+}
+
+.recent-post-img-right {
+  width: 37px;
+}
+
+.recent-post-text {
+  font-family: GOTHAMbook;
+  font-size: 12px;
+  color: #626262;
+}
+
+.recent-post-title {
+font-size: 12px;
+font-family: GOTHAMbold;
+color: #065775;
+margin-bottom: 4px;
+}
+
+.recent-classifieds {
+border-bottom: 1px dotted;
+padding-bottom: 6px;
+padding-top: 6px;
+position: relative;
+}
+
+.posts-view-all {
+  padding-top: 6px;
+}
+.classifieds-post-label {
+font-family: GOTHAMbold;
+font-size: 12px;
+float: left;
+margin-right: 4px;
+}
+.recent-post-text {
+font-family: GOTHAMbook;
+font-size: 12px;
+color: #626262;
+line-height: 15px;
+width: 240px;
+}
+
+.posts-view-all a {
+  font-size: 12px;
+  font-family: GOTHAMbook;
+  text-decoration: none;
+  color: #868686;
+  padding-left: 16%;
+}
+
+.recent-post-img-right {
+position: absolute;
+right: 0;
+top: 4px;
+}
+
+.browse-by-categories {
+background: #dce5ec;
+float: left;
+width: 271px;
+padding-left: 16px;
+padding-right: 13px;
+padding-bottom: 10px;
+}
+.browse-categories-label {
+color: #005d80;
+font-family: GOTHAMbold;
+font-size: 12px;
+text-transform: uppercase;
+padding-top: 16px;
+margin-bottom: 18px;
+}
+
+.cate-1 {
+float: left;
+width: 49%;
+border-bottom: 2px solid #367d99;
+margin-right: 2%;
+padding-bottom: 0px;
+padding-top: 4px;
+}
+
+.cate-2 {
+float: left;
+width: 48%;
+border-bottom: 2px solid #367d99;
+}
+
+.cate-img {
+width: 37px;
+float: left;
+padding-left: 5px;
+}
+.cate-text {
+padding-bottom: 10px;
+padding-top: 0px;
+padding-left: 41px;
+}
+
+.cate-label {
+font-family: GOTHAMbold;
+font-size: 12px;
+color: #1e1f24;
+display: block;
+}
+.cate-number {
+font-size: 12px;
+font-family: GOTHAMbook;
+color: #686f75;
+}
+.cate-2 {
+float: left;
+width: 48%;
+border-bottom: 2px solid #367d99;
+padding-top: 4px;
+}
+
+#footer {
+width: 1024px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+#footer li.sports a {
+  padding-right: 2px;
+}
+
+.pager-wrs-selection {
+  background: #f1f1f1;
+  float: left;
+  width: 100%;
+  line-height: 19px;
+  text-align: center;
+}
+
+.pager-wrs-selection .pager1 a,
+.pager-wrs-selection .pager2 a,
+.pager-wrs-selection .pager3 a{
+  text-indent: -9999em;
+  background: url(images/pager.jpg) no-repeat;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+}
+
+.footer-world-radio {
+  float: left;
+  width: 57.5%;
+  text-align: center;
+  margin-left: 11%;
+  line-height: 28px;
+  margin-top: 7px;
+}
+
+.footer-world-radio h1 {
+  font-size: 18px;
+  font-family: GOTHAMbold;
+  color: #6c7476;
+  text-transform: uppercase;
+}
+
+.footer-world-radio p {
+  font-size: 14px;
+  font-family: GOTHAMbook;
+  color: #9b9b9b;
+  text-transform: uppercase;
+}
+
+.social {
+  float: left;
+  margin-top: 7px;
+}
+
+/**css for hover **/
+.latest-news li:hover {
+background: #faf037;
+}
+
+.news-bulletion-label:hover {
+background: #faf037;
+color: #1f1f1f;
+}
+
+.sidebar-second .next-content:hover {
+background: #faf037;
+color: #1f1f1f;
+}
+
+.sidebar-second .next-content:hover > div {
+  color: #1f1f1f;
+}
+
+.sidebar-second .later-content:hover,
+.recent-classifieds:hover,
+.categories .cate-1:hover,
+.categories .cate-2:hover,
+.wrs-selection-rows .wrs-selection-content:hover  {
+  background: #faf037;
+}
+
+.sidebar-second .later-content:hover > div {
+  color: #1f1f1f;
+}
+
+.sidebar-second .later-content:hover > div > span {
+  color: #1f1f1f;
+}
+
+.content-middle-banner,
+.wrs-selection-img {
+  position: relative;
+}
+
+.content-middle-banner:hover:before {
+  background: url(images/Banner_02Y.jpg);
+}
+
+.slider:hover:before,
+.foriegn-affair:hover:before,
+.wrs-selection-img:hover:before {
+  background: #faf037;
+  opacity: .8;
+  }
+
+.slider:before,
+.foriegn-affair:before,
+.content-middle-banner:before,
+.wrs-selection-img:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+
+.slider:hover .slider-text-country,
+.slider:hover .slider-date {
+  background: #faf037;
+  color: #3c3c3c;
+}
+
+.foriegn-affair:hover .affair-content > span,
+.wrs-selection-rows .wrs-selection-content:hover  div{
+  color: #3c3c3c;
+  }

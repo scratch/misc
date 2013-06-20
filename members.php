@@ -18,7 +18,7 @@ tt_print_fields("members");
 
 $qry_result = tt_select_fields($fd, "members", array("members_name", "members_email", "members_username", "members_status","members_last_activity_date", "members_registration_date"));
 
-print ('"user_login","user_email","user_pass","first_name","last_name","display_name","role","custom_usermeta_1","custom_usermeta_2'."\n");
+print ('"user_login","user_email","user_pass","first_name","last_name","display_name","role","custom_usermeta_1","custom_usermeta_2"'."\n");
 while (($members = mysql_fetch_array($qry_result, MYSQL_ASSOC))) {
    printf ("\"%s\",\"%s\",,\"%s\",,\"%s\",,,\n", $members['members_username'], $members['members_email'], $members['members_name'], $members['members_name']);
 }

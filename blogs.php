@@ -36,8 +36,7 @@ fputcsv($fd_blogcmtscsv, split(',', "blog_id,comment_author,comment_date,comment
 
 $blog_entry = array();
 
-/* while (($blog_entry = mysql_fetch_array($qry_result, MYSQL_ASSOC))) { */
-if (1)  {
+while (($blog_entry = mysql_fetch_array($qry_result, MYSQL_ASSOC))) {
 	$blog_entry = mysql_fetch_array($qry_result, MYSQL_ASSOC);
 	if (!$blog_entry) {
 		die("Error fetching array from mysql object");

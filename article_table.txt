@@ -1,0 +1,62 @@
+Table: articles
+================
++--------------------------+------------------+------+-----+---------------------+----------------+
+| Field                    | Type             | Null | Key | Default             | Extra          |
++--------------------------+------------------+------+-----+---------------------+----------------+
+| articles_id              | int(10) unsigned | NO   | PRI | NULL                | auto_increment |
+| articles_name            | varchar(50)      | NO   |     | NULL                |                |
+| articles_title           | varchar(255)     | NO   |     | NULL                |                |
+| articles_summary         | text             | NO   | MUL | NULL                |                |
+| articles_category        | int(4)           | YES  | MUL | NULL                |                |
+| articles_content         | mediumtext       | NO   | MUL | NULL                |                |
+| articles_external_link   | varchar(255)     | NO   |     | NULL                |                |
+| articles_content_type    | char(1)          | NO   |     | NULL                |                |
+| articles_authorised      | tinyint(1)       | NO   | MUL | 0                   |                |
+| articles_members_only    | tinyint(1)       | NO   |     | 0                   |                |
+| articles_added_by        | int(11)          | NO   |     | 0                   |                |
+| articles_added_on        | datetime         | NO   | MUL | 0000-00-00 00:00:00 |                |
+| articles_updated_by      | int(11)          | NO   |     | 0                   |                |
+| articles_last_updated_on | datetime         | NO   |     | 0000-00-00 00:00:00 |                |
+| articles_email_ctr       | int(6)           | YES  |     | 0                   |                |
+| articles_sort_id         | tinyint(4)       | YES  |     | 0                   |                |
+| articles_read_ctr        | int(6)           | YES  |     | 0                   |                |
+| articles_comment_ctr     | int(10) unsigned | NO   |     | 0                   |                |
+| articles_comment_status  | tinyint(1)       | NO   |     | 1                   |                |
++--------------------------+------------------+------+-----+---------------------+----------------+
+
+Table:  article_categories
+============================
++------------------------------+------------------+------+-----+---------+----------------+
+| Field                        | Type             | Null | Key | Default | Extra          |
++------------------------------+------------------+------+-----+---------+----------------+
+| article_categories_id        | int(6) unsigned  | NO   | PRI | NULL    | auto_increment |
+| article_categories_name      | varchar(150)     | YES  |     | NULL    |                |
+| article_categories_parent_id | int(10) unsigned | NO   | MUL | NULL    |                |
+| article_categories_weight    | int(10) unsigned | NO   |     | NULL    |                |
++------------------------------+------------------+------+-----+---------+----------------+
+
+Table: article_comments
+========================
++-------------------------------+------------------+------+-----+---------------------+----------------+
+| Field                         | Type             | Null | Key | Default             | Extra          |
++-------------------------------+------------------+------+-----+---------------------+----------------+
+| article_comments_id           | int(10) unsigned | NO   | PRI | NULL                | auto_increment |
+| article_comments_article_id   | int(10) unsigned | NO   | MUL | 0                   |                |
+| article_comments_date         | datetime         | NO   |     | 0000-00-00 00:00:00 |                |
+| article_comments_author_id    | int(10) unsigned | NO   | MUL | 0                   |                |
+| article_comments_author_name  | varchar(100)     | NO   |     |                     |                |
+| article_comments_author_email | varchar(150)     | NO   |     |                     |                |
+| article_comments_comment      | text             | NO   |     | NULL                |                |
+| article_comments_authorized   | tinyint(1)       | NO   | MUL | 0                   |                |
+| article_comments_ip           | int(10) unsigned | NO   |     | 0                   |                |
++-------------------------------+------------------+------+-----+---------------------+----------------+
+
+Table:  articles_uploaded_files;
+=================================
++------------------------------+------------------+------+-----+---------+----------------+
+| Field                        | Type             | Null | Key | Default | Extra          |
++------------------------------+------------------+------+-----+---------+----------------+
+| articles_uploaded_files_id   | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| articles_id                  | int(10) unsigned | NO   | MUL | 0       |                |
+| articles_uploaded_files_name | varchar(40)      | NO   |     |         |                |
++------------------------------+------------------+------+-----+---------+----------------+

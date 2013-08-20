@@ -1,20 +1,67 @@
 Notes:
 
-Table articles:  
-    Fields Used:  id, name, title, summary, category, content, external_link (? REVISIT), content_type, authorised, members_only, last_updated_on, 
-                  read_ctr(?? See if possible to incorporate) 
-    Not Used:     added_by, added_on, updated_by, email_ctr, sort_id, read_ctr, comment_ctr, comment_status
+#. Table articles:  
+    Fields Used:  id, name, title, summary, category, content,
+	              external_link (? REVISIT), content_type, authorised, 
+				  members_only, last_updated_on, 
+				  read_ctr(?? See if possible to incorporate) 
+    Not Used:     added_by, added_on, updated_by, email_ctr, sort_id, 
+	              read_ctr, comment_ctr, comment_status
     
 
-Table articles_category:
+#. Table articles_category:
     Fields Used:     id, name, parent_id, weight,
 
 
-Table: article_comments
-    Fields Used: comment_id, article_id, date, author_id, author_name, email, comment, authorized, ip (?? Check if possible)
+#. Table: article_comments
+    Fields Used: comment_id, article_id, date, author_id, author_name, 
+	             email, comment, authorized, ip (?? Check if possible)
     
-Table: article_uploaded_files:
+#. Table: article_uploaded_files:
     Fields Used: article_id, file_id, file_name.  
+
+
+Design:
+
+#. As in previous migration of blogs, two CSV's will be created, 
+   articles.csv, article_cmts.csv. The key will be the article ID.
+   Note: Possibly another CSV, with the files uploaded for article is needed.
+
+#. article.csv contents:
+   article_id, name, title, summary (maps to post_excerpts?), category(ID?),
+   content, members_only, authorised, last_updated_on, files_present(bool)
+
+#. article_cmts.csv contents:
+   article_id, comment_id, date, author_id, email, comment, IP
+
+
+wp Post fields
+-------------
+
+$post = array(
+  'ID'             => [ <post id> ] //Are you updating an existing post?
+  'menu_order'     => [ <order> ] //If new post is a page, it sets the order in which it should appear in the tabs.
+  'comment_status' => [ 'closed' | 'open' ] // 'closed' means no comments.
+  'ping_status'    => [ 'closed' | 'open' ] // 'closed' means pingbacks or trackbacks turned off
+  'pinged'         => [ ? ] //?
+  'post_author'    => [ <user ID> ] //The user ID number of the author.
+  'post_category'  => [ array(<category id>, <...>) ] //post_category no longer exists, try wp_set_post_terms() for setting a post's categories
+  'post_content'   => [ <the text of the post> ] //The full text of the post.
+  'post_date'      => [ Y-m-d H:i:s ] //The time post was made.
+  'post_date_gmt'  => [ Y-m-d H:i:s ] //The time post was made, in GMT.
+  'post_excerpt'   => [ <an excerpt> ] //For all your post excerpt needs.
+  'post_name'      => [ <the name> ] // The name (slug) for your post
+  'post_parent'    => [ <post ID> ] //Sets the parent of the new post.
+  'post_password'  => [ ? ] //password for post?
+  'post_status'    => [ 'draft' | 'publish' | 'pending'| 'future' | 'private' | 'custom_registered_status' ] //Set the status of the new post.
+  'post_title'     => [ <the title> ] //The title of your post.
+  'post_type'      => [ 'post' | 'page' | 'link' | 'nav_menu_item' | 'custom_post_type' ] //You may want to insert a regular post, page, link, a menu item or some custom post type
+  'tags_input'     => [ '<tag>, <tag>, <...>' ] //For tags.
+  'to_ping'        => [ ? ] //?
+  'tax_input'      => [ array( 'taxonomy_name' => array( 'term', 'term2', 'term3' ) ) ] // support for custom taxonomies. 
+);  
+
+
 
 Table: articles
 ================

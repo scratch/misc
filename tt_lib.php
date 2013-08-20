@@ -39,12 +39,12 @@ function tt_select_fields ($db_fd, $table, $fields_arr)  {
 function tt_connect($host, $user, $pwd, $db) {
 	$fd = mysql_connect($host, $user, $pwd);
 	if (!$fd) {
-		die("Error opening connection\n");
+		die("Error opening connection" . mysql_error() . "\n");
 	}
 
 	$retVal = mysql_select_db($db, $fd); // Rigel: tibetimes;
 	if (!$retVal) {
-		die("DB select failed: " . mysql_error());
+		die("DB select failed: " . mysql_error() . "\n");
 	}
 
 	return $fd;

@@ -1,3 +1,21 @@
+Notes:
+
+Table articles:  
+    Fields Used:  id, name, title, summary, category, content, external_link (? REVISIT), content_type, authorised, members_only, last_updated_on, 
+                  read_ctr(?? See if possible to incorporate) 
+    Not Used:     added_by, added_on, updated_by, email_ctr, sort_id, read_ctr, comment_ctr, comment_status
+    
+
+Table articles_category:
+    Fields Used:     id, name, parent_id, weight,
+
+
+Table: article_comments
+    Fields Used: comment_id, article_id, date, author_id, author_name, email, comment, authorized, ip (?? Check if possible)
+    
+Table: article_uploaded_files:
+    Fields Used: article_id, file_id, file_name.  
+
 Table: articles
 ================
 +--------------------------+------------------+------+-----+---------------------+----------------+
@@ -24,6 +42,7 @@ Table: articles
 | articles_comment_status  | tinyint(1)       | NO   |     | 1                   |                |
 +--------------------------+------------------+------+-----+---------------------+----------------+
 
+    
 Table:  article_categories
 ============================
 +------------------------------+------------------+------+-----+---------+----------------+
@@ -35,6 +54,7 @@ Table:  article_categories
 | article_categories_weight    | int(10) unsigned | NO   |     | NULL    |                |
 +------------------------------+------------------+------+-----+---------+----------------+
 
+    
 Table: article_comments
 ========================
 +-------------------------------+------------------+------+-----+---------------------+----------------+

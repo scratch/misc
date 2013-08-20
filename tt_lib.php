@@ -36,13 +36,13 @@ function tt_select_fields ($db_fd, $table, $fields_arr)  {
 /* connect to DB. Bug: shouldn't die() from a lib
  *
  */
-function tt_connect() {
-	$fd = mysql_connect("192.168.1.4", "tibetimes", "tibetimes");
+function tt_connect($host, $user, $pwd, $db) {
+	$fd = mysql_connect($host, $user, $pwd);
 	if (!$fd) {
 		die("Error opening connection\n");
 	}
 
-	$retVal = mysql_select_db("tibetimes", $fd);
+	$retVal = mysql_select_db($db, $fd); // Rigel: tibetimes;
 	if (!$retVal) {
 		die("DB select failed: " . mysql_error());
 	}

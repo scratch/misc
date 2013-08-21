@@ -75,9 +75,9 @@ $article = mysql_fetch_array($qry_result, MYSQL_ASSOC);
 var_dump($article);
 */
  
-$art_entry = array(); $cnt = 0;
+$art_entry = array(); $artCnt = 0; $cmtCnt = 0;
 while (($art_entry = mysql_fetch_array($artqry_result, MYSQL_ASSOC))) {
-    $cnt++;
+    $artCnt++;
     $file_uploaded_flg = HasFilesUploaded($fd, $art_entry['articles_id']);
     fputcsv($fd_artcsv,
          array(
@@ -97,6 +97,7 @@ while (($art_entry = mysql_fetch_array($artqry_result, MYSQL_ASSOC))) {
         continue;
 
     while (($cmt = mysql_fetch_array ($cmtqry_result, MYSQL_ASSOC)) )  {
+        $cmtCnt++;
         fputcsv($fd_artcmtcsv,
           array(
             $cmt['article_comments_id'], 
@@ -111,5 +112,5 @@ while (($art_entry = mysql_fetch_array($artqry_result, MYSQL_ASSOC))) {
     }
 }
 
-printf ("%d articles printed\n", $cnt);
+printf ("%d articles with %d comments printed\n", $artCnt, $cmtCnt);
 ?>

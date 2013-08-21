@@ -39,7 +39,7 @@ fputcsv($fd_blogcmtscsv, split(',', "blog_id,comment_author,comment_email, comme
 $blog_entry = array();
 
 while (($blog_entry = mysql_fetch_array($qry_result, MYSQL_ASSOC))) {
-	$blog_entry = mysql_fetch_array($qry_result, MYSQL_ASSOC);
+	// $blog_entry = mysql_fetch_array($qry_result, MYSQL_ASSOC);
 	if (!$blog_entry) {
 		die("Error fetching array from mysql object");
 	}
@@ -62,9 +62,10 @@ while (($blog_entry = mysql_fetch_array($qry_result, MYSQL_ASSOC))) {
 		continue;
 
 	while (($cmt_entry = mysql_fetch_array($cmt_result, MYSQL_ASSOC)))  {
-		printf("\nComment Author: %s\nComment Date: %s\nComment: %s\n XX--comment-end--XX \n\n", 
+		/* printf("\nComment Author: %s\nComment Date: %s\nComment: %s\n XX--comment-end--XX \n\n", 
 			$cmt_entry['members_name'], $cmt_entry['blog_entries_comments_date'], 
 			$cmt_entry['blog_entries_comments_comment']);
+			*/
 		fputcsv($fd_blogcmtscsv,
 			array($cmt_entry['blog_entries_comments_blog_entries_id'],
 				$cmt_entry['members_name'],

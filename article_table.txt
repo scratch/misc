@@ -1,12 +1,12 @@
 Notes:
 
 #. Table articles:  
-    Fields Used:  id, name, title, summary, category, content,
+    Fields Used:  id,  title, summary, category, content,
 	              external_link (? REVISIT), content_type, authorised, 
 				  members_only, last_updated_on, 
 				  read_ctr(?? See if possible to incorporate) 
-    Not Used:     added_by, added_on, updated_by, email_ctr, sort_id, 
-	              read_ctr, comment_ctr, comment_status
+    Not Used:     name (Field empty), added_by, added_on, updated_by, 
+			   	  email_ctr, sort_id, read_ctr, comment_ctr, comment_status
     
 
 #. Table articles_category:
@@ -15,7 +15,7 @@ Notes:
 
 #. Table: article_comments
     Fields Used: comment_id, article_id, date, author_id, author_name, 
-	             email, comment, authorized, ip (?? Check if possible)
+	             email, comment, authorized, IP
     
 #. Table: article_uploaded_files:
     Fields Used: article_id, file_id, file_name.  
@@ -28,7 +28,7 @@ Design:
    Note: Possibly another CSV, with the files uploaded for article is needed.
 
 #. article.csv contents:
-   article_id, name, title, summary (maps to post_excerpts?), category(ID?),
+   article_id, title, summary (maps to post_excerpts?), category(ID?),
    content, members_only, authorised, last_updated_on, files_present(bool)
 
 #. article_cmts.csv contents:

@@ -45,6 +45,7 @@ function tt_connect($host, $user, $pwd, $db) {
 	$retVal = mysql_select_db($db, $fd); // Rigel: tibetimes;
 	if (!$retVal) {
 		die("DB select failed: " . mysql_error() . "\n");
+		return $retVal;
 	}
 
 	return $fd;

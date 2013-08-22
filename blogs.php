@@ -74,4 +74,8 @@ while (($blog_entry = mysql_fetch_array($qry_result, MYSQL_ASSOC))) {
 				 $cmt_entry['blog_entries_comments_comment']));
 	}
 }
+
+fclose($fd_blogcmtscsv);
+fclose($fd_blogcsv);
+fclose($fd);
 ?>

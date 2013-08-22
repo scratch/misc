@@ -113,4 +113,8 @@ while (($art_entry = mysql_fetch_array($artqry_result, MYSQL_ASSOC))) {
 }
 
 printf ("%d articles with %d comments printed\n", $artCnt, $cmtCnt);
+
+fclose ($fd_artcmtcsv);
+fclose ($fd_artcsv);
+mysql_close($fd);
 ?>

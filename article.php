@@ -27,7 +27,7 @@ function HasFilesUploaded($fd, $id)  {
 /* Fetch comments associated with article, if any  */
 function ArticleComments($fd, $id)  {
 	$qry = 
-        "SELECT c.article_comments_id, $id, 
+        "SELECT c.article_comments_id, c.article_comments_article_id, 
             c.article_comments_date, c.article_comments_author_id,
             c.article_comments_author_name,
             c.article_comments_author_email,

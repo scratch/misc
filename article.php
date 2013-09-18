@@ -43,6 +43,20 @@ function ArticleComments($fd, $id)  {
 }
 
 
+function GetCategoryName($cat_id, $fd)  {
+    $qry = "SELECT c.article_categories_name FROM article_categories c WHERE c.article_categories_id=$cat_id";
+    $qry_result = mysql_query($qry, $fd);
+    if (!$qry_result)  {
+        printf("Get category name Query failed: %s", mysql_error());
+        return null;
+    }
+    else  {
+        $cname = mysql_fetch_array ($qry_result, MYSQL_ASSOC); 
+        return $cname['article_categories_name'];
+    }
+}
+
+
 
 /* Open the articles CSV for writing */
 $fd_artcsv = fopen('article.csv', 'w');
@@ -79,12 +93,15 @@ $art_entry = array(); $artCnt = 0; $cmtCnt = 0;
 while (($art_entry = mysql_fetch_array($artqry_result, MYSQL_ASSOC))) {
     $artCnt++;
     $file_uploaded_flg = HasFilesUploaded($fd, $art_entry['articles_id']);
+    $category_name = GetCategoryName($art_entry['articles_category'], $fd);
+
     fputcsv($fd_artcsv,
          array(
             $art_entry['articles_id'], 
             $art_entry['articles_title'], 
             $art_entry['articles_summary'],
-            $art_entry['articles_category'],
+            /*$art_entry['articles_category'], */
+            $category_name,
             $art_entry['articles_content'],
             $art_entry['articles_members_only'],
             $art_entry['articles_authorised'], 

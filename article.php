@@ -57,19 +57,38 @@ function GetCategoryName($cat_id, $fd)  {
 }
 
 
+function OpenCSVFile ($name, $cnt)  {
+    $fname = $name . "$cnt" . ".csv";
+    $fd  = fopen($fname, 'w');
+    if (! $fd)  {
+        printf ("Error opening file: %s\n", $fname);
+        die();
+    }
+
+    printf ("Created file: %s\n", $fname);
+
+    return $fd;
+}
+
+
+function WriteCSVHeaders($fd_art, $fd_artcmt)  {
+    // Write the CSV header.
+    fputcsv($fd_art,split(',',"articles_id,articles_title,articles_summary,articles_category,articles_content,articles_members_only,articles_authorised,articles_last_updated_on,files_present"));
+    fputcsv($fd_artcmt,split(',', "comment_id,article_id,date,author_id,author_name,email,comment,authorized,IP"));
+}
+
+
 
 /* Open the articles CSV for writing */
-$fd_artcsv = fopen('article.csv', 'w');
-$fd_artcmtcsv = fopen('article_cmt.csv', 'w');
+$fd_artcsv = fopen('csv/article.csv', 'w');
+$fd_artcmtcsv = fopen('csv/article_cmt.csv', 'w');
 
 if (!$fd_artcsv  ||  !$fd_artcmtcsv) {
     print("Error opening file\n");
     die();
 }
 
-// Write the CSV header.
-fputcsv($fd_artcsv,split(',',"articles_id,articles_title,articles_summary,articles_category,articles_content,articles_members_only,articles_authorised,articles_last_updated_on,files_present"));
-fputcsv($fd_artcmtcsv,split(',', "comment_id,article_id,date,author_id,author_name,email,comment,authorized,IP"));
+WriteCSVHeaders($fd_artcsv, $fd_artcmtcsv);
 
 $fd = tt_connect('localhost', 'sc', 'calvin', 'tibettimes_old');
 $article_entry_qry = 
@@ -126,6 +145,17 @@ while (($art_entry = mysql_fetch_array($artqry_result, MYSQL_ASSOC))) {
             $cmt['article_comments_comment'],
             $cmt['article_comments_authorized'],
             $cmt['article_comments_ip']));
+    }
+
+    /* Split the files, one for every 100 comments */
+    if (($artCnt % 100) == 0)  {
+        fclose ($fd_artcsv);
+        fclose ($fd_artcmtcsv);
+
+        $fd_artcsv = OpenCSVFile ("csv/article", $artCnt/100);
+        $fd_artcmtcsv = OpenCSVFile ("csv/article_cmt", $artCnt/100);
+
+        WriteCSVHeaders($fd_artcsv, $fd_artcmtcsv);
     }
 }
 
